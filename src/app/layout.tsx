@@ -1,7 +1,7 @@
+import Header from '@/components/layout/Header'
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { inter, pacifico } from '@/utils/font'
+import { cn } from '@/utils/style'
 
 export const metadata = {
     title: 'Create Next App',
@@ -15,8 +15,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={inter.className}>
-                <main>{children}</main>
+            <body className={cn(inter.variable, pacifico.variable, 'font-inter')}>
+                <Header />
+                <main className='w-full h-[calc(100vh-6rem)]'>{children}</main>
             </body>
         </html>
     )
