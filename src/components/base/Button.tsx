@@ -10,9 +10,9 @@ export default function Button({
         <button
             {...props}
             className={cn(
-                'bg-yellow-400/90 text-black font-medium rounded-lg px-6 py-2 transition-all',
-                'hover:bg-yellow-400',
-                'disabled:opacity-50 disabled:hover:bg-yellow-400/90 disabled:cursor-not-allowed',
+                'bg-sky-400/90 text-white font-medium rounded-lg px-6 py-2 transition-all',
+                'hover:bg-sky-400',
+                'disabled:opacity-50 disabled:hover:bg-sky-400/90 disabled:cursor-not-allowed',
                 className
             )}
         >{ children }</button>

@@ -22,23 +22,24 @@ export default function ShortUrlForm() {
         <>
             <form
                 onSubmit={handleSubmit}
-                className='w-full max-w-4xl border border-gray-800 rounded-3xl p-10'
+                className='w-full max-w-5xl bg-slate-900 border border-sky-700 shadow-2xl shadow-sky-400/30 rounded-3xl p-10'
             >
                 <fieldset className='mb-4'>
-                    <label className='block'>URL to short</label>
+                    <label className='block font-medium mb-1'>URL to short</label>
                     <Input type='url' name='url' placeholder='Type your URL here' required className='py-3' />
                 </fieldset>
-                <div className='w-full grid grid-cols-12 gap-8'>
-                    <fieldset className='col-span-3 mb-8'>
-                        <label className='block'>Domain</label>
-                        <Input type='text' placeholder="biturl.vercel.app" className='rounded-r-sm py-3' />
-                    </fieldset>
-                    <fieldset className='col-span-9'>
-                        <label className='block'>Back-half</label>
-                        <Input type='text' name="backHalf" placeholder="example:favorite-link" className='rounded-l-sm py-3' />
+                <div className='w-full flex items-center gap-2 mb-12'>
+                    <div className='w-fit flex items-center gap-2 mt-6'>
+                        <span className='text-2xl font-pacifico text-sky-400'>B</span>
+                        <span className='hidden lg:block -ml-1'>iturl.vercel.app/</span>
+                        <span className='lg:hidden text-2xl'>/</span>
+                    </div>
+                    <fieldset className='w-[calc(100%-36.5px)] lg:w-[calc(100%-150px)]'>
+                        <label className='block font-medium mb-1'>Back-half</label>
+                        <Input type='text' name="backHalf" placeholder="example:favorite-link" className='py-3' />
                     </fieldset>
                 </div>
-                <Button className='w-1/4'>Shorten</Button>
+                <Button className='w-full lg:max-w-xs py-3'>Shorten</Button>
             </form>
             { urlShortened && <p>{urlShortened}</p> }
         </>

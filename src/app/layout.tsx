@@ -15,7 +15,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={cn(inter.variable, pacifico.variable, 'font-inter')}>
+            <body className={cn(
+                inter.variable, pacifico.variable, 'font-inter',
+                'bg-slate-900 bg-[url("/svg/pattern.svg")] text-slate-400'
+            )}>
                 <Header />
                 <main className='w-full h-[calc(100vh-6rem)]'>{children}</main>
             </body>
