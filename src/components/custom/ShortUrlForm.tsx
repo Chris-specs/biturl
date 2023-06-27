@@ -28,17 +28,17 @@ export default function ShortUrlForm() {
                     <label className='block font-medium mb-1'>URL to short</label>
                     <Input type='url' name='url' placeholder='Type your URL here' required className='py-3' />
                 </fieldset>
-                <div className='w-full flex items-center gap-2 mb-12'>
-                    <div className='w-fit flex items-center gap-2 mt-6'>
-                        <span className='text-2xl font-pacifico text-sky-400'>B</span>
-                        <span className='hidden lg:block -ml-1'>iturl.vercel.app/</span>
-                        <span className='lg:hidden text-2xl'>/</span>
+                <fieldset className='w-full mb-12'>
+                    <label className='block font-medium mb-1'>Back-half</label>
+                    <div className='w-full h-fit relative'>
+                        <div className='w-fit flex items-center gap-1 lg:gap-0.5 absolute top-1/2 -translate-y-1/2 left-3'>
+                            <span className='text-2xl font-pacifico text-sky-400'>B</span>
+                            <span className='hidden lg:block text-slate-300'>iturl.vercel.app</span>
+                            <span className='text-2xl text-slate-300'>/</span>
+                        </div>
+                        <Input type='text' name="backHalf" placeholder="example:favorite-link" className='pl-12 lg:pl-[157px] py-3' />
                     </div>
-                    <fieldset className='w-[calc(100%-36.5px)] lg:w-[calc(100%-150px)]'>
-                        <label className='block font-medium mb-1'>Back-half</label>
-                        <Input type='text' name="backHalf" placeholder="example:favorite-link" className='py-3' />
-                    </fieldset>
-                </div>
+                </fieldset>
                 <Button className='w-full lg:max-w-xs py-3'>Shorten</Button>
             </form>
             { urlShortened && <p>{urlShortened}</p> }
