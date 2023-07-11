@@ -23,7 +23,7 @@ export default async function Header() {
                         }
                         <hr className='w-[1px] h-7 bg-slate-400/50 border-0' />
                         <NextLink href='https://github.com/Chris-specs/biturl' target='_blank'>
-                            <Icon.github className='w-6 h-6'/>
+                            <Icon.github className='w-6 h-6 hover:text-white transition-all'/>
                         </NextLink>
                     </div>
                 </nav>
