@@ -1,16 +1,17 @@
 // Common
+import { db } from '@/lib/db'
 import { NextResponse } from 'next/server'
 // Prisma
-import { PrismaClient } from '@prisma/client'
+// import { PrismaClient } from '@db/client'
 
-const prisma = new PrismaClient()
+// const db = new PrismaClient()
 
 export async function GET(req: Request) {
     const { searchParams } = new URL(req.url)
     const shortUrl = searchParams.get('short')
 
     if (shortUrl) {
-        const data = await prisma.link.findUnique({
+        const data = await db.link.findUnique({
             where: {
                 shortUrl: shortUrl ?? ''
             }
@@ -21,7 +22,7 @@ export async function GET(req: Request) {
         })
     }
 
-    const data = await prisma.link.findMany()
+    const data = await db.link.findMany()
 
     return NextResponse.json(data, {
         status: 200
@@ -33,7 +34,7 @@ export async function POST(req: Request) {
     const shortUrl = Math.random().toString().substring(2, 7)
 
     try {
-        const data = await prisma.link.create({
+        const data = await db.link.create({
             data: {
                 url,
                 shortUrl: backHalf !== '' ? backHalf : shortUrl
