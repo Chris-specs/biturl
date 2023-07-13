@@ -1,10 +1,8 @@
 import { NextAuthOptions, getServerSession } from 'next-auth'
 import { db } from './db'
-// import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import GoogleProvider from 'next-auth/providers/google'
 
 export const authOptions: NextAuthOptions = {
-    // adapter: PrismaAdapter(db),
     session: {
         strategy: 'jwt'
     },
@@ -79,7 +77,7 @@ export const authOptions: NextAuthOptions = {
             }
         },
         redirect() {
-            return '/'
+            return '/dashboard'
         }
     }
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@/utils/style'
+import { cn } from '@/utils/helpers/style'
 import Image from 'next/image'
 import { signOut } from 'next-auth/react'
 import { User } from 'next-auth'

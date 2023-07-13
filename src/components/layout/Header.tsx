@@ -19,7 +19,7 @@ export default async function Header() {
                         {
                             session
                                 ? <UserMenu user={session.user} />
-                                : <Link href='/sign-in' main>Sign in</Link>
+                                : <Link href='/sign-in' variant='main'>Sign in</Link>
                         }
                         <hr className='w-[1px] h-7 bg-slate-400/50 border-0' />
                         <NextLink href='https://github.com/Chris-specs/biturl' target='_blank'>

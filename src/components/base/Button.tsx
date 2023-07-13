@@ -1,5 +1,5 @@
 // Utils
-import { cn } from '@/utils/style'
+import { cn } from '@/utils/helpers/style'
 
 export default function Button({
     children,

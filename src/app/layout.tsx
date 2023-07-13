@@ -1,7 +1,7 @@
 import Header from '@/components/layout/Header'
 import './globals.css'
-import { inter, pacifico } from '@/utils/font'
-import { cn } from '@/utils/style'
+import { inter, pacifico } from '@/utils/constants/font'
+import { cn } from '@/utils/helpers/style'
 
 export const metadata = {
     title: 'Create Next App',

@@ -11,7 +11,7 @@ export default function SignInPage() {
                     href='/'
                     className='w-fit flex items-center gap-2'
                 >
-                    <Icon.back className='w-4 h-4'/>{' '}
+                    <Icon.back className='w-5 h-5'/>{' '}
                 Go back to home
                 </Link>
 
