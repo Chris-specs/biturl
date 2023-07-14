@@ -12,7 +12,7 @@ export default async function Header() {
         <header className="px-4">
             <Container>
                 <nav className="w-full h-24 flex justify-between items-center">
-                    <NextLink href='/' className='text-4xl font-pacifico text-white'>
+                    <NextLink href={ session ? '/dashboard' : '/'} className='text-4xl font-pacifico text-white'>
                         <span className='text-sky-400'>Bit</span>url
                     </NextLink>
                     <div className='flex items-center gap-4'>
